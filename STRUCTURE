@@ -1,9 +1,7 @@
 feature follow-recommends
 include platform.jammy
-artwork:
-elementary-sdk:
-pantheon-shell:
-pantheon:
-desktop: desktop-common artwork pantheon
-ship: boot installer desktop d-i-requirements
-live: desktop live-common
+desktop-minimal: desktop-common
+desktop: desktop-minimal desktop-common
+desktop-full: desktop desktop-common
+ship: boot installer desktop-minimal d-i-requirements
+live: desktop-minimal live-common

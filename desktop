@@ -1,9 +1,9 @@
 Task-Per-Derivative: 1
 Task-Section: user
-Task-Description: elementary desktop
-Task-Extended-Description: This task provides the elementary OS desktop environment.
-Task-Key: elementary-desktop
-Task-Seeds: desktop-common
+Task-Description: MamoLinux desktop
+Task-Extended-Description: This task provides the MamoLinux desktop environment.
+Task-Key: mamolinux-desktop
+Task-Seeds: desktop-minimal desktop-common
 
 = Hardware and Architecture Support =
 
@@ -12,7 +12,6 @@ Task-Seeds: desktop-common
 Bluetooth:
 
  * (gnome-bluetooth) # desktop bluetooth support
- * (io.elementary.contractor.gnome-bluetooth-contract)
 
 = Network Services =
 
@@ -27,279 +26,58 @@ Basic network services, VPN and Windows integration.
 
 = GUI infrastructure =
 
- * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
-
-Input methods:
-
- * (gtk-im-libthai)
- * (ibus-chewing)
- * (im-config)
- * (ibus)
- * (ibus-gtk)
- * (ibus-gtk3)
- * (ibus-hangul)
- * (ibus-libpinyin)
- * (ibus-m17n)
- * (ibus-mozc)
- * (ibus-table)
- * (ibus-table-cangjie)
- * (ibus-table-quick-classic)
- * (ibus-unikey)
- * (ibus-table-wubi)
- * (mozc-utils-gui)
-
 Desktop Experience:
- * elementary-artwork
- * pantheon
- * (io.elementary.greeter)
- * (io.elementary.initial-setup)
- * (io.elementary.onboarding)
-
-System-wide distro-specific artwork:
- * (plymouth-theme-elementary)
- * (plymouth-theme-elementary-text)
- * (elementary-printer-test-page)
-
-Switchboard and plugs:
- * (io.elementary.switchboard.wacom)
- * (switchboard)
- * (switchboard-plug-about)
- * (switchboard-plug-a11y)
- * (switchboard-plug-applications)
- * (switchboard-plug-bluetooth)
- * (switchboard-plug-datetime)
- * (switchboard-plug-display)
- * (switchboard-plug-keyboard)
- * (switchboard-plug-locale)
- * (switchboard-plug-mouse-touchpad)
- * (switchboard-plug-networking)
- * (switchboard-plug-notifications)
- * (switchboard-plug-online-accounts)
- * (switchboard-plug-power)
- * (switchboard-plug-pantheon-shell)
- * (switchboard-plug-parental-controls)
- * (switchboard-plug-printers)
- * (switchboard-plug-sharing)
- * (switchboard-plug-security-privacy)
- * (switchboard-plug-sound)
- * (switchboard-plug-useraccounts)
-
-UI and branding fonts for elementary:
- * (fonts-elementary-core)
-
-Wingpanel and indicators:
- * (io.elementary.wingpanel)
- * (wingpanel-indicator-a11y)
- * (wingpanel-indicator-bluetooth)
- * (wingpanel-indicator-datetime)
- * (wingpanel-indicator-keyboard)
- * (wingpanel-indicator-network)
- * (wingpanel-indicator-nightlight)
- * (wingpanel-indicator-notifications)
- * (wingpanel-indicator-power)
- * (wingpanel-indicator-session)
- * (wingpanel-indicator-sound)
+ * (thunderbird-gnome-support)
 
 Location Support:
  * (geoclue-2.0)
 
 OS-only stuff:
- * (capnet-assist)
- * (elementary-default-settings)
- * (gnome-session-bin)       # starts up cerbere according to default-settings
- * (pantheon-agent-polkit)
  * (p7zip-full)            # elementary: supports a crazy number of formats
-
-Pantheon Online Accounts:
- * (evolution-data-server-google2)
- * (evolution-data-server-outlook)
- * (evolution-data-server-pantheon-online-accounts)
- * (gsignond)
- * (gsignond-plugin-oauth)
-
-Prerelease stuff:
- * (elementary-os-prerelease)
-# * (elementary-os-beta-transition) # converts Daily PPA to Stable if it's installed
 
 = Desktop apps =
 
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
- * (org.gnome.fileroller)
- * gnome-menus
- * (gnome-power-manager)
- * (gnome-font-viewer)
- * zenity
- * (xdg-utils)         # useful utilities
- * xdg-user-dirs
- * xdg-user-dirs-gtk
- * pulseaudio
- * (pulseaudio-module-bluetooth)
- * gvfs-bin             # mostly used as xdg-open backend
- * (gvfs-fuse)          # let non-GNOME apps see GVFS via fuse
- * (libpam-gnome-keyring)
- * (htop)
-
-The gstreamer1.0 packages we want to install:
-
- * gstreamer1.0-alsa
- * gstreamer1.0-plugins-base-apps
- * gstreamer1.0-packagekit
- * gstreamer1.0-pulseaudio
+ * (thunderbird)
+ * (transmission-gtk)
+ * (gnome-todo)
+ * (baobab)
+ * (rhythmbox)
+ * (cheese)
+ * (totem)
+ * (simple-scan)
+ * (remmina)
+ * (shotwell)
+ * (usb-creator-gtk) [i386 amd64]
+ * (deja-dup)
+ * (gnome-calendar)
 
 Accessibility tools:
 
  * (orca)
- * (brltty)
  * (speech-dispatcher)
- * (mousetweaks)
- * at-spi2-core
- * libatk-adaptor
- * (libgail-common)
 
-= Documentation =
+Games: We only ship a few by default.
+ * (aisleriot)
+ * (gnome-mahjongg)
+ * (gnome-mines)
+ * (gnome-sudoku)
+ * (branding-ubuntu)       # Ubuntu branding for some games
 
- * doc-base         # integrates with scrollkeeper
+Default office suite: libreoffice
 
-= Language packs, dictionaries and additional fonts =
-
-Bulgarian:
- * (language-pack-gnome-bg)
- * (language-pack-bg)
- * (wbulgarian)
-
-Catalan:
- * (language-pack-gnome-ca)
- * (language-pack-ca)
- * (wcatalan)
-
-Chinese (Simplified):
- * (fonts-arphic-uming)
- * (fonts-arphic-ukai)
- * (language-pack-gnome-zh-hans)
- * (language-pack-zh-hans)
-
-Chinese (Traditional):
- * (fonts-arphic-uming)
- * (fonts-arphic-ukai)
- * (language-pack-gnome-zh-hant)
- * (language-pack-zh-hant)
-
-Czech:
- * (language-pack-gnome-cs)
- * (language-pack-cs)
-
-Danish:
- * (language-pack-gnome-da)
- * (language-pack-da)
- * (wdanish)
-
-Dutch:
- * (language-pack-gnome-nl)
- * (language-pack-nl)
- * (wdutch)
-
-English:
- * (hunspell-en-au)
- * (hunspell-en-ca)
- * (hunspell-en-gb)
- * (hunspell-en-us)
- * (hunspell-en-za)
- * (language-pack-gnome-en)
- * (language-pack-en)
- * (wamerican)
- * (wbritish)
-
-French:
- * (hunspell-fr)
- * (language-pack-gnome-fr)
- * (language-pack-fr)
- * (wfrench)
-
-German:
- * (hunspell-de-at-frami)
- * (hunspell-de-ch-frami)
- * (hunspell-de-de-frami)
- * (language-pack-gnome-de)
- * (language-pack-de)
- * (wngerman)
- * (wogerman)
-
-Hungarian:
- * (language-pack-gnome-hu)
- * (language-pack-hu)
-
-Indonesian:
- * (language-pack-gnome-id)
- * (language-pack-id)
-
-Italian:
- * (hunspell-it)
- * (language-pack-gnome-it)
- * (language-pack-it)
- * (witalian)
-
-Japanese:
- * (language-pack-gnome-ja)
- * (language-pack-ja)
-
-Korean:
- * (language-pack-gnome-ko)
- * (language-pack-ko)
-
-Norwegian:
- * (language-pack-gnome-nb)
- * (language-pack-nb)
- * (wnorwegian)
-
-Polish:
- * (language-pack-gnome-pl)
- * (language-pack-pl)
- * (wpolish)
-
-Portuguese:
- * (hunspell-pt-br)
- * (hunspell-pt-pt)
- * (language-pack-gnome-pt)
- * (language-pack-pt)
- * (wbrazilian)
- * (wportuguese)
-
-Russian:
- * (hunspell-ru)
- * (language-pack-gnome-ru)
- * (language-pack-ru)
-
-Spanish:
- * (hunspell-es)
- * (language-pack-gnome-es)
- * (language-pack-es)
- * (wspanish)
-
-Swedish:
- * (language-pack-gnome-sv)
- * (language-pack-sv)
- * (wswedish)
- * (wswiss)
-
-Thai:
- * (language-pack-gnome-th)
- * (language-pack-th)
-
-Turkish:
- * (language-pack-gnome-tr)
- * (language-pack-tr)
-
-Ukrainian:
- * (language-pack-gnome-uk)
- * (language-pack-uk)
- * (wukrainian)
-
-Vietnamese:
- * (language-pack-gnome-vi)
- * (language-pack-vi)
+ * !libreoffice-core-nogui
+ * (libreoffice-style-breeze)
+ * (libreoffice-gnome)
+ * (libreoffice-writer)
+ * (libreoffice-calc)
+ * (libreoffice-impress)
+ * (libreoffice-math)
+ * (libreoffice-ogltrans)
+ * (libreoffice-pdfimport)
 
 = Other =
 
- * elementary-desktop # metapackage for everything here
- * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
+ * mamolinux-desktop-minimal # we are a superset of minimal
+ * mamolinux-desktop # metapackage for everything here
