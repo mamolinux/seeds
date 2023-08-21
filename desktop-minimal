@@ -1,0 +1,169 @@
+Task-Per-Derivative: 1
+Task-Section: user
+Task-Description: MamoLinux minimal desktop
+Task-Extended-Description: This task provides the MamoLinux cinnamon desktop minimal environment.
+Task-Key: mamolinux-desktop-minimal
+Task-Seeds: desktop-common
+
+= Hardware and Architecture Support =
+
+== Architecture-independent ==
+
+Bluetooth:
+
+ * (gnome-bluetooth) # desktop bluetooth support
+
+= Network Services =
+
+Basic network services, VPN and Windows integration.
+
+ * (avahi-autoipd)     # IPv4 link-local interface configuration support
+
+= GUI infrastructure =
+
+ * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
+ * !notification-daemon           # cinnamon provides this feature instead
+
+Input methods:
+
+ * (im-config)
+ * ibus
+ * (ibus-gtk)
+ * (ibus-gtk3)
+ * (ibus-table)
+
+Desktop Experience:
+ * cinnamon
+ * gnome-panel
+ * gnome-firmware
+ * gnome-software
+ * lightdm-settings
+ * redshift-gtk
+ * slick-greeter
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * apport-gtk
+ * (whoopsie)
+ * (eog)
+ * (file-roller)
+ * lightdm
+ * (gdebi)
+ * gnome-screenshot
+ * system-monitoring-center
+ * (synapse)
+ * (system-config-printer)
+ * (gnome-power-manager)
+ * (gnome-terminal)
+ * (gnome-font-viewer)
+ * language-selector-gnome
+ * (firefox)
+ * software-properties-gtk
+ * ubuntu-release-upgrader-gtk
+ * update-manager
+ * update-notifier
+ * yelp
+ * zenity
+ * xed
+ * (xdg-desktop-portal-gnome) # Useful for desktop snaps
+ * (xdg-desktop-portal-gtk)
+ * (xdg-utils)         # useful utilities
+ * xdg-user-dirs
+ * xdg-user-dirs-gtk
+ * pulseaudio
+ * (pulseaudio-module-bluetooth)
+ * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
+ * gvfs-backends
+ * (gvfs-fuse)          # let non-GNOME apps see GVFS via fuse
+ * (gnome-disk-utility)
+ * gparted
+ * (evince)
+ * (gnome-system-monitor)
+ * (gnome-calculator)
+ * (gnome-characters)
+ * (appstream)          # required by snap:snap-store for appstream cache
+ * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
+ * (gamemode)
+
+ Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
+ * snap:firefox
+ * snap:gnome-3-38-2004
+ * snap:gnome-42-2204 # needed by snapd-desktop-integration
+ * snap:gtk-common-themes
+ * snap:snap-store
+ * snap:snapd-desktop-integration
+
+= Key management and signing =
+
+ * (gnome-keyring)
+ * (seahorse)
+ * (libpam-gnome-keyring)
+
+We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
+
+ * (gpg-agent)
+ * (dirmngr)
+
+Themes: we will ship only the very best looking themes. We won't ship everything that Debian ships, just a custom package that includes our default theme.
+
+Sucharu Theming
+
+ * (sucharu-theme-cinnamon-shell)
+ * (sucharu-theme-gtk)
+ * (sucharu-theme-icon)
+ * (yaru-theme-sound)
+ * (mamolinux-themes-cursor)
+
+Wallpapers
+
+ * (mamolinux-wallpapers)
+
+Fonts
+
+ * (fonts-liberation2)  # These 3 fonts are required for emoji in GTK input methods
+ * (fonts-noto-color-emoji)
+ * (fonts-opensymbol)
+
+Others
+
+Boot theme
+
+ * (plymouth-theme-spinner)
+
+Settings: we have some settings overrides by default in an unique package.
+          and provide our ones, like sound settings
+ * mamolinux-settings
+
+The gstreamer1.0 packages we want to install:
+
+ * gstreamer1.0-alsa
+ * gstreamer1.0-plugins-base-apps
+ * gstreamer1.0-packagekit [!riscv64 !s390x]
+ * gstreamer1.0-pulseaudio
+
+Accessibility tools:
+
+ * (gnome-accessibility-themes)
+ * (orca)
+ * (brltty)
+ * (xcursor-themes)
+ * (speech-dispatcher)
+ * (mousetweaks)
+ * at-spi2-core
+ * libatk-adaptor
+
+== PAM modules for GDM ==
+
+ * (libpam-fprintd)
+ * (libpam-sss) # used by the default smartcard service
+
+= Documentation =
+
+ * (ubuntu-docs)
+
+= Other =
+
+ * mamolinux-desktop-minimal # metapackage for everything here
+ * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images

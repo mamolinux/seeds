@@ -1,9 +1,9 @@
 Task-Per-Derivative: 1
 Task-Section: user
-Task-Description: elementary live CD
-Task-Extended-Description: This task provides the extra packages installed on the Ubuntu live CD. It is neither useful nor recommended to install this task in other environments.
+Task-Description: MamoLinux live CD
+Task-Extended-Description: This task provides the extra packages installed on the MamoLinux live CD. It is neither useful nor recommended to install this task in other environments.
 Task-Relevance: 2
-Task-Key: ubiquity-frontend-gtk
+Task-Key: mamolinux-default-install
 Task-Test-new-install: skip show
 Task-Seeds: live-common
 
@@ -45,11 +45,10 @@ default live.
 == Distinst components ==
 
  * distinst
- * io.elementary.installer
+ * calamares-settings-mamolinux
 
 == Misc ==
 
- * gparted
  * expect
  * cifs-utils # Needed by casper for CIFS root=
  * jfsutils # Needed for JFS installation (lp:1442982)
@@ -59,4 +58,7 @@ default live.
  * discover
  * laptop-detect
  * os-prober
-
+ * lupin-casper
+ * uuid-runtime
+ * discover
+ * laptop-detect
