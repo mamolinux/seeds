@@ -38,27 +38,28 @@ default live.
 
 == Fonts (zh-hans) ==
 
- * fonts-noto-cjk
  * fonts-arphic-uming
  * fonts-arphic-ukai
 
 == Distinst components ==
 
- * distinst
+ * calamares
  * calamares-settings-mamolinux
+
+== Zfs on root support ==
+
+ * zfsutils-linux
+ * zfs-initramfs
+ * zsys
+
+== Secureboot setup ==
+
+ * shim-signed [amd64]
+ * grub-pc [amd64]
 
 == Misc ==
 
  * expect
  * cifs-utils # Needed by casper for CIFS root=
- * jfsutils # Needed for JFS installation (lp:1442982)
- * xfsprogs # Needed for XFS installation
-
- * casper
- * discover
- * laptop-detect
  * os-prober
- * lupin-casper
- * uuid-runtime
  * discover
- * laptop-detect

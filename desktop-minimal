@@ -26,8 +26,8 @@ Basic network services, VPN and Windows integration.
 
 Input methods:
 
- * (im-config)
  * ibus
+ * (im-config)
  * (ibus-gtk)
  * (ibus-gtk3)
  * (ibus-table)
@@ -37,6 +37,7 @@ Desktop Experience:
  * gnome-panel
  * gnome-firmware
  * gnome-software
+ * lightdm
  * lightdm-settings
  * redshift-gtk
  * slick-greeter
@@ -46,20 +47,18 @@ Desktop Experience:
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
  * apport-gtk
- * (whoopsie)
- * (eog)
- * (file-roller)
- * lightdm
- * (gdebi)
+ * eog
+ * evince
+ * epiphany-browser
+ * file-roller
+ * firefox
+ * gnome-disk-utility
+ * gparted
  * gnome-screenshot
+ * (gvfs-fuse)          # let non-GNOME apps see GVFS via fuse
  * system-monitoring-center
- * (synapse)
- * (system-config-printer)
- * (gnome-power-manager)
- * (gnome-terminal)
- * (gnome-font-viewer)
+ * synapse
  * language-selector-gnome
- * (firefox)
  * software-properties-gtk
  * ubuntu-release-upgrader-gtk
  * update-manager
@@ -67,25 +66,27 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * yelp
  * zenity
  * xed
- * (xdg-desktop-portal-gnome) # Useful for desktop snaps
- * (xdg-desktop-portal-gtk)
- * (xdg-utils)         # useful utilities
  * xdg-user-dirs
  * xdg-user-dirs-gtk
  * pulseaudio
+
+ * (gnome-terminal)
+ * (gdebi)
+ * (system-config-printer)
+ * (gnome-power-manager)
+ * (gnome-font-viewer)
+ * (xdg-desktop-portal-gnome) # Useful for desktop snaps
+ * (xdg-desktop-portal-gtk)
+ * (xdg-utils)         # useful utilities
  * (pulseaudio-module-bluetooth)
  * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
- * gvfs-backends
- * (gvfs-fuse)          # let non-GNOME apps see GVFS via fuse
- * (gnome-disk-utility)
- * gparted
- * (evince)
  * (gnome-system-monitor)
  * (gnome-calculator)
  * (gnome-characters)
  * (appstream)          # required by snap:snap-store for appstream cache
  * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
  * (gamemode)
+ * (whoopsie)
 
  Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
  * snap:firefox
@@ -110,15 +111,15 @@ Themes: we will ship only the very best looking themes. We won't ship everything
 
 Sucharu Theming
 
- * (sucharu-theme-cinnamon-shell)
- * (sucharu-theme-gtk)
- * (sucharu-theme-icon)
- * (yaru-theme-sound)
- * (mamolinux-themes-cursor)
+ * sucharu-theme-cinnamon-shell
+ * sucharu-theme-gtk
+ * sucharu-theme-icon
+ * yaru-theme-sound
+ * mamolinux-themes-cursor
 
 Wallpapers
 
- * (mamolinux-wallpapers)
+ * mamolinux-wallpapers
 
 Fonts
 
@@ -130,7 +131,7 @@ Others
 
 Boot theme
 
- * (plymouth-theme-spinner)
+ * plymouth-theme-spinner
 
 Settings: we have some settings overrides by default in an unique package.
           and provide our ones, like sound settings
@@ -146,10 +147,8 @@ The gstreamer1.0 packages we want to install:
 Accessibility tools:
 
  * (gnome-accessibility-themes)
- * (orca)
  * (brltty)
  * (xcursor-themes)
- * (speech-dispatcher)
  * (mousetweaks)
  * at-spi2-core
  * libatk-adaptor

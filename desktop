@@ -3,7 +3,7 @@ Task-Section: user
 Task-Description: MamoLinux desktop
 Task-Extended-Description: This task provides the MamoLinux desktop environment.
 Task-Key: mamolinux-desktop
-Task-Seeds: desktop-minimal desktop-common
+Task-Seeds: desktop-minimal
 
 = Hardware and Architecture Support =
 
@@ -11,13 +11,10 @@ Task-Seeds: desktop-minimal desktop-common
 
 Bluetooth:
 
- * (gnome-bluetooth) # desktop bluetooth support
-
 = Network Services =
 
 Basic network services, VPN and Windows integration.
 
- * (avahi-autoipd)     # IPv4 link-local interface configuration support
  * (network-manager)
  * (network-manager-config-connectivity-ubuntu)
  * (network-manager-pptp-gnome)
@@ -33,7 +30,7 @@ Location Support:
  * (geoclue-2.0)
 
 OS-only stuff:
- * (p7zip-full)            # elementary: supports a crazy number of formats
+ * p7zip-full            # elementary: supports a crazy number of formats
 
 = Desktop apps =
 
@@ -42,13 +39,13 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * (thunderbird)
  * (transmission-gtk)
  * (gnome-todo)
- * (baobab)
- * (rhythmbox)
- * (cheese)
+ * baobab
+ * rhythmbox
+ * cheese
  * (totem)
- * (simple-scan)
+ * simple-scan
  * (remmina)
- * (shotwell)
+ * shotwell
  * (usb-creator-gtk) [i386 amd64]
  * (deja-dup)
  * (gnome-calendar)
@@ -64,6 +61,12 @@ Games: We only ship a few by default.
  * (gnome-mines)
  * (gnome-sudoku)
  * (branding-ubuntu)       # Ubuntu branding for some games
+
+= Key management and signing =
+
+ * (gnome-keyring)
+ * seahorse
+ * (libpam-gnome-keyring)
 
 Default office suite: libreoffice
 
