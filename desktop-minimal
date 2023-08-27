@@ -39,7 +39,6 @@ Desktop Experience:
  * gnome-software
  * lightdm
  * lightdm-settings
- * redshift-gtk
  * slick-greeter
 
 = Desktop apps =
@@ -54,21 +53,25 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * firefox
  * gnome-disk-utility
  * gparted
+ * gnome-calculator
  * gnome-screenshot
- * (gvfs-fuse)          # let non-GNOME apps see GVFS via fuse
- * system-monitoring-center
- * synapse
+ * gufw
+ * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
  * language-selector-gnome
+ * pulseaudio
+ * redshift-gtk
+ * synapse
  * software-properties-gtk
+ * system-monitoring-center
+ * theme-manager
  * ubuntu-release-upgrader-gtk
  * update-manager
  * update-notifier
+ * vlc
+ * xdg-user-dirs-gtk
+ * xed
  * yelp
  * zenity
- * xed
- * xdg-user-dirs
- * xdg-user-dirs-gtk
- * pulseaudio
 
  * (gnome-terminal)
  * (gdebi)
@@ -81,8 +84,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * (pulseaudio-module-bluetooth)
  * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
  * (gnome-system-monitor)
- * (gnome-calculator)
- * (gnome-characters)
  * (appstream)          # required by snap:snap-store for appstream cache
  * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
  * (gamemode)
@@ -96,12 +97,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * snap:snap-store
  * snap:snapd-desktop-integration
 
-= Key management and signing =
-
- * (gnome-keyring)
- * (seahorse)
- * (libpam-gnome-keyring)
-
 We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
 
  * (gpg-agent)
@@ -111,11 +106,14 @@ Themes: we will ship only the very best looking themes. We won't ship everything
 
 Sucharu Theming
 
+ * mamolinux-themes-cursor
  * sucharu-theme-cinnamon-shell
  * sucharu-theme-gtk
  * sucharu-theme-icon
+ * sucharu-theme-plank
+ * sucharu-theme-unity
+ * sucharu-theme-xfwm4
  * yaru-theme-sound
- * mamolinux-themes-cursor
 
 Wallpapers
 

@@ -30,25 +30,28 @@ Location Support:
  * (geoclue-2.0)
 
 OS-only stuff:
- * p7zip-full            # elementary: supports a crazy number of formats
+ * p7zip-full            # mamolinux: supports a crazy number of formats
 
 = Desktop apps =
 
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
- * (thunderbird)
- * (transmission-gtk)
- * (gnome-todo)
- * baobab
- * rhythmbox
- * cheese
- * (totem)
- * simple-scan
- * (remmina)
+ * evolution
+ * gdebi
+ * leaptime-manager
  * shotwell
- * (usb-creator-gtk) [i386 amd64]
+ * simple-scan
+ * simple-pwgen
+ * sticky
+ * timeshift
  * (deja-dup)
  * (gnome-calendar)
+ * (gnome-todo)
+ * (remmina)
+ * (thunderbird)
+ * (totem)
+ * (transmission-gtk)
+ * (usb-creator-gtk) [i386 amd64]
 
 Accessibility tools:
 
@@ -56,8 +59,9 @@ Accessibility tools:
  * (speech-dispatcher)
 
 Games: We only ship a few by default.
- * (aisleriot)
+ * gnome-chess
  * (gnome-mahjongg)
+ * (aisleriot)
  * (gnome-mines)
  * (gnome-sudoku)
  * (branding-ubuntu)       # Ubuntu branding for some games
@@ -69,14 +73,10 @@ Games: We only ship a few by default.
  * (libpam-gnome-keyring)
 
 Default office suite: libreoffice
-
+ * libreoffice
  * !libreoffice-core-nogui
  * (libreoffice-style-breeze)
  * (libreoffice-gnome)
- * (libreoffice-writer)
- * (libreoffice-calc)
- * (libreoffice-impress)
- * (libreoffice-math)
  * (libreoffice-ogltrans)
  * (libreoffice-pdfimport)
 

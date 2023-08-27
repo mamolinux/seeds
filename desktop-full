@@ -15,19 +15,24 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  * baobab
  * cheese
+ * flatpak
  * gnome-characters
  * goldendict
  * gucharmap
  * gtkhash
  * hardinfo
  * hexchat
- * libreoffice
  * lm-sensors
- * simple-pwgen
+ * rhythmbox
  * syncthing
  * variety
  * vlc-plugin-access-extra
 
+= Fonts =
+
+ * fonts-indic
+
 = Other =
 
+ * mamolinux-desktop # we are a superset of mamolinux-desktop
  * mamolinux-desktop-full # metapackage for everything here
