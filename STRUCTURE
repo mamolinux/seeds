@@ -1,7 +1,7 @@
 feature follow-recommends
 include platform.jammy
+boot: boot
 desktop-minimal: desktop-common
 desktop: desktop-minimal desktop-common
 desktop-full: desktop desktop-common
-ship: boot installer desktop-minimal d-i-requirements
 live: desktop-minimal live-common

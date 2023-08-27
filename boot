@@ -1,0 +1,9 @@
+Task-Per-Derivative: 1
+Task-Section: user
+Task-Description: MamoLinux boot
+Task-Extended-Description: This task provides the packages needed to make a system bootable.
+Task-Seeds: boot
+
+ * initramfs-tools
+ * thermald
+ * os-prober

@@ -8,7 +8,7 @@ Task-Test-new-install: skip show
 Task-Seeds: live-common
 
 
-== Languages ==
+== Common language packs ==
 
 The full rationale on how we choose the languages and what we install
 is at https://launchpad.net/bugs/1520278
@@ -59,7 +59,7 @@ default live.
 
 == Misc ==
 
- * expect
  * cifs-utils # Needed by casper for CIFS root=
- * os-prober
  * discover
+ * expect
+ * laptop-detect
