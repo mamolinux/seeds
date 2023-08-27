@@ -59,7 +59,9 @@ default live.
 
 == Misc ==
 
+ * casper
  * cifs-utils # Needed by casper for CIFS root=
  * discover
  * expect
  * laptop-detect
+ * tasksel

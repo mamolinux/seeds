@@ -74,7 +74,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * zenity
 
  * (gnome-terminal)
- * (gdebi)
  * (system-config-printer)
  * (gnome-power-manager)
  * (gnome-font-viewer)
