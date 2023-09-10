@@ -11,6 +11,11 @@ Task-Seeds: desktop-minimal
 
 Bluetooth:
 
+Printer:
+
+ * system-config-printer
+ * (python3-smbc)		# needed to connect network printers shared by windows
+
 = Network Services =
 
 Basic network services, VPN and Windows integration.
