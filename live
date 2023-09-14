@@ -50,7 +50,6 @@ default live.
 
  * zfsutils-linux
  * zfs-initramfs
- * zsys
 
 == Secureboot setup ==
 
