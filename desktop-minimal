@@ -58,7 +58,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
  * gvfs-backends      # let users connect to any server using nemo
  * language-selector-gnome
- * pulseaudio
  * redshift-gtk
  * synapse
  * software-properties-gtk
@@ -69,6 +68,8 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * update-notifier
  * vlc
  * xdg-user-dirs-gtk
+ * pipewire-pulse
+ * wireplumber
  * xed
  * yelp
  * zenity
@@ -78,7 +79,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * (xdg-desktop-portal-gnome) # Useful for desktop snaps
  * (xdg-desktop-portal-gtk)
  * (xdg-utils)         # useful utilities
- * (pulseaudio-module-bluetooth)
+ * (libspa-0.2-bluetooth) # PipeWire Bluetooth
  * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
  * (gnome-system-monitor)
  * (appstream)          # required by snap:snap-store for appstream cache
