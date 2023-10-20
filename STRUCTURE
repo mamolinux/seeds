@@ -1,5 +1,5 @@
 feature follow-recommends
-include platform.jammy
+include platform.lunar
 desktop-minimal: desktop-common
 desktop: desktop-minimal desktop-common
 desktop-full: desktop desktop-common
