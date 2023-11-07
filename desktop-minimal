@@ -13,6 +13,10 @@ Bluetooth:
 
  * (gnome-bluetooth) # desktop bluetooth support
 
+Printer:
+
+ * system-config-printer
+
 = Network Services =
 
 Basic network services, VPN and Windows integration.
