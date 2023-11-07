@@ -38,12 +38,12 @@ Input methods:
 
 Desktop Experience:
  * cinnamon
- * gnome-firmware
- * gnome-software
  * lightdm
  * lightdm-settings
  * slick-greeter
  * ubuntu-report
+ * (gnome-firmware)
+ * (gnome-software)
 
 = Desktop apps =
 
