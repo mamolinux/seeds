@@ -3,7 +3,7 @@ Task-Section: user
 Task-Description: MamoLinux desktop
 Task-Extended-Description: This task provides the MamoLinux desktop environment.
 Task-Key: mamolinux-desktop
-Task-Seeds: desktop-minimal
+Task-Seeds: desktop-minimal desktop-common
 
 = Hardware and Architecture Support =
 

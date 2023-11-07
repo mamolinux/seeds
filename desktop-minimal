@@ -11,7 +11,7 @@ Task-Seeds: desktop-common
 
 Bluetooth:
 
- * (gnome-bluetooth) # desktop bluetooth support
+ * (gnome-bluetooth-sendto) # desktop bluetooth support
 
 Printer:
 
@@ -43,6 +43,7 @@ Desktop Experience:
  * lightdm
  * lightdm-settings
  * slick-greeter
+ * ubuntu-report
 
 = Desktop apps =
 
@@ -57,6 +58,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * gnome-disk-utility
  * gparted
  * gnome-calculator
+ * gnome-clocks
  * gnome-screenshot
  * gufw
  * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
@@ -71,6 +73,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * update-manager
  * update-notifier
  * vlc
+ * xdg-user-dirs
  * xdg-user-dirs-gtk
  * pipewire-pulse
  * wireplumber
@@ -93,11 +96,11 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
  * snap:firefox
- * snap:gnome-3-38-2004
  * snap:gnome-42-2204 # needed by snapd-desktop-integration
  * snap:gtk-common-themes
  * snap:snap-store
  * snap:snapd-desktop-integration
+ * snap:firmware-updater [amd64]
 
 We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
 
@@ -129,6 +132,8 @@ Fonts
 
 Others
 
+ * gnome-session-canberra   # Needed to make login/logout sounds audible.
+
 Boot theme
 
  * plymouth-theme-spinner
@@ -142,7 +147,6 @@ The gstreamer1.0 packages we want to install:
  * gstreamer1.0-alsa
  * gstreamer1.0-plugins-base-apps
  * gstreamer1.0-packagekit [!riscv64 !s390x]
- * gstreamer1.0-pulseaudio
 
 Accessibility tools:
 
@@ -166,3 +170,9 @@ Accessibility tools:
 
  * mamolinux-desktop-minimal # metapackage for everything here
  * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
+
+= ARM64 Desktop =
+
+ * (flash-kernel) [arm64] # currently not installed by our installers, but needed for dtbs
+ * (protection-domain-mapper) [arm64] # needed for access to QCOM hardware
+ * (qrtr-tools) [arm64]  # needed for access to QCOM hardware
