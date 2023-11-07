@@ -52,7 +52,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * apport-gtk
  * eog
  * evince
- * epiphany-browser
  * file-roller
  * firefox
  * gnome-disk-utility
@@ -111,14 +110,13 @@ Themes: we will ship only the very best looking themes. We won't ship everything
 
 Sucharu Theming
 
- * mamolinux-themes-cursor
  * sucharu-theme-cinnamon-shell
+ * sucharu-theme-cursor
  * sucharu-theme-gtk
  * sucharu-theme-icon
  * sucharu-theme-plank
  * sucharu-theme-unity
  * sucharu-theme-xfwm4
- * yaru-theme-sound
 
 Wallpapers
 
@@ -140,7 +138,7 @@ Boot theme
 
 Settings: we have some settings overrides by default in an unique package.
           and provide our ones, like sound settings
- * mamolinux-settings
+ * mamolinux-settings-cinnamon
 
 The gstreamer1.0 packages we want to install:
 
