@@ -95,7 +95,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
  * snap:firefox
- * snap:gnome-42-2204 # needed by snapd-desktop-integration
+ * snap:gnome-42-2204
  * snap:gtk-common-themes
  * snap:snap-store
  * snap:snapd-desktop-integration
@@ -125,7 +125,6 @@ Wallpapers
 Fonts
 
  * (fonts-liberation2)  # These 3 fonts are required for emoji in GTK input methods
- * (fonts-noto-color-emoji)
  * (fonts-opensymbol)
 
 Others
