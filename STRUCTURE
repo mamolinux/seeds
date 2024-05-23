@@ -10,7 +10,7 @@ server: standard
 server-cloud-minimal:
 server-live: server
 server-minimal: server-cloud-minimal
-live: desktop-minimal live-common
+live: desktop-minimal live-common desktop-default-languages
 ship: boot
 development: desktop-minimal
 # default language support
