@@ -10,7 +10,7 @@ Task-Seeds: desktop-common
 == Architecture-independent ==
 
 Bluetooth:
-
+ * blueman # bluetooth manager gui
  * (gnome-bluetooth-sendto) # desktop bluetooth support
 
 Printer:
