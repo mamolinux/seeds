@@ -38,6 +38,7 @@ Input methods:
 
 Desktop Experience:
  * cinnamon
+ * gnome-online-accounts-gtk
  * lightdm
  * lightdm-settings
  * slick-greeter
