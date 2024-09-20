@@ -1,0 +1,175 @@
+Task-Per-Derivative: 1
+Task-Section: user
+Task-Description: MamoLinux Budgie minimal desktop
+Task-Extended-Description: This task provides the MamoLinux Budgie desktop minimal environment.
+Task-Key: mamolinux-budgie-minimal
+Task-Seeds: desktop-common
+
+= Hardware and Architecture Support =
+
+== Architecture-independent ==
+
+Bluetooth:
+ * blueman # bluetooth manager gui
+ * (gnome-bluetooth-sendto) # desktop bluetooth support
+
+Printer:
+
+ * system-config-printer
+
+= Network Services =
+
+Basic network services, VPN and Windows integration.
+
+ * (avahi-autoipd)     # IPv4 link-local interface configuration support
+
+= GUI infrastructure =
+
+ * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
+ * !notification-daemon           # cinnamon provides this feature instead
+
+Input methods:
+
+ * ibus
+ * (im-config)
+ * (ibus-gtk)
+ * (ibus-gtk3)
+ * (ibus-table)
+
+Desktop Experience:
+ * budgie-desktop
+ * nemo
+ * lightdm
+ * lightdm-settings
+ * slick-greeter
+ * ubuntu-report
+ * (gnome-firmware)
+ * (gnome-software)
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * apport-gtk
+ * eog
+ * evince
+ * file-roller
+ * firefox
+ * gnome-disk-utility
+ * gparted
+ * gnome-calculator
+ * gnome-clocks
+ * gnome-screenshot
+ * gufw
+ * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
+ * gvfs-backends      # let users connect to any server using nemo
+ * language-selector-gnome
+ * redshift-gtk
+ * synapse
+ * software-properties-gtk
+ * system-monitoring-center
+ * theme-manager
+ * ubuntu-release-upgrader-gtk
+ * update-manager
+ * update-notifier
+ * vlc
+ * xdg-user-dirs
+ * xdg-user-dirs-gtk
+ * pipewire-pulse
+ * wireplumber
+ * xed
+ * yelp
+ * zenity
+
+ * (gnome-power-manager)
+ * (gnome-font-viewer)
+ * (xdg-desktop-portal-gnome) # Useful for desktop snaps
+ * (xdg-desktop-portal-gtk)
+ * (xdg-utils)         # useful utilities
+ * (libspa-0.2-bluetooth) # PipeWire Bluetooth
+ * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
+ * (gnome-system-monitor)
+ * (appstream)          # required by snap:snap-store for appstream cache
+ * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
+ * (gamemode)
+ * (whoopsie)
+
+ Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
+ * snap:firefox
+ * snap:gnome-42-2204
+ * snap:gtk-common-themes
+ * snap:snap-store
+ * snap:snapd-desktop-integration
+ * snap:firmware-updater [amd64]
+
+We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
+
+ * (gpg-agent)
+ * (dirmngr)
+
+Themes: we will ship only the very best looking themes. We won't ship everything that Debian ships, just a custom package that includes our default theme.
+
+Sucharu Theming
+
+ * sucharu-theme-cursor
+ * sucharu-theme-gtk
+ * sucharu-theme-icon
+ * sucharu-theme-plank
+ * sucharu-theme-unity
+ * sucharu-theme-xfwm4
+
+Wallpapers
+
+ * mamolinux-wallpapers
+
+Fonts
+
+ * (fonts-liberation2)  # These 3 fonts are required for emoji in GTK input methods
+ * (fonts-opensymbol)
+
+Others
+
+ * gnome-session-canberra   # Needed to make login/logout sounds audible.
+
+Boot theme
+
+ * plymouth-theme-spinner
+
+Settings: we have some settings overrides by default in an unique package.
+          and provide our ones, like sound settings
+ * mamolinux-settings-cinnamon
+
+The gstreamer1.0 packages we want to install:
+
+ * gstreamer1.0-alsa
+ * gstreamer1.0-plugins-base-apps
+ * gstreamer1.0-packagekit [!riscv64 !s390x]
+
+Accessibility tools:
+
+ * (gnome-accessibility-themes)
+ * (brltty)
+ * (xcursor-themes)
+ * (mousetweaks)
+ * at-spi2-core
+ * libatk-adaptor
+
+== PAM modules for GDM ==
+
+ * (libpam-fprintd)
+ * (libpam-sss) # used by the default smartcard service
+
+= Documentation =
+
+ * (ubuntu-docs)
+
+= Other =
+
+ * mamolinux-budgie-minimal # metapackage for everything here
+ * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
+
+= ARM64 Desktop =
+
+ * (flash-kernel) [arm64] # currently not installed by our installers, but needed for dtbs
+ * (protection-domain-mapper) [arm64] # needed for access to QCOM hardware
+ * (qrtr-tools) [arm64]  # needed for access to QCOM hardware

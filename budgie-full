@@ -1,0 +1,36 @@
+Task-Per-Derivative: 1
+Task-Section: user
+Task-Description: MamoLinux Budgie desktop with all apps
+Task-Extended-Description: This task provides the MamoLinux Budgie desktop full environment.
+Task-Key: mamolinux-budgie-full
+Task-Seeds: budgie
+
+= GUI infrastructure =
+
+Desktop Experience:
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * baobab
+ * cheese
+ * flatpak
+ * gnome-characters
+ * goldendict
+ * gucharmap
+ * gtkhash
+ * hardinfo
+ * hexchat
+ * lm-sensors
+ * rhythmbox
+ * syncthing
+ * variety
+ * vlc-plugin-access-extra
+
+= Fonts =
+
+= Other =
+
+ * mamolinux-budgie # we are a superset of mamolinux-desktop
+ * mamolinux-budgie-full # metapackage for everything here
