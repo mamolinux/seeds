@@ -7,6 +7,9 @@ desktop-full: desktop desktop-minimal desktop-common
 budgie-minimal: desktop-common
 budgie: budgie-minimal desktop-common
 budgie-full: budgie budgie-minimal desktop-common
+gnome-minimal: desktop-common
+gnome: gnome-minimal desktop-common
+gnome-full: gnome gnome-minimal desktop-common
 openssh-server: standard
 print-server: standard
 server: standard
