@@ -21,6 +21,7 @@ and minimal Ubuntu cloud.
  * systemd-sysv
  * udev
  * ubuntu-release-upgrader-core
+ * unminimize
 
 == Block device / filesystem tools ==
 

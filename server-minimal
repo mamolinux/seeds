@@ -30,6 +30,8 @@ always include all of them.
  * ubuntu-server-minimal
  * u-boot-sifive [riscv64]  # we decided that all riscv64 installers
                             # should ship u-boot-sifive on the minimal layer
+ * (kdump-tools)            # Needed to enable kernel crash dumps by default
+                            # but leave as recommend to allow uninstall later.
 
 == Blacklist ==
 

@@ -28,6 +28,7 @@ Basic network services, VPN and Windows integration.
 = GUI infrastructure =
 
 Desktop Experience:
+ * snap:thunderbird
 
 Location Support:
  * (geoclue-2.0)

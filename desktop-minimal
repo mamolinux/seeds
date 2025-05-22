@@ -21,7 +21,12 @@ Printer:
 
 Basic network services, VPN and Windows integration.
 
- * (avahi-autoipd)     # IPv4 link-local interface configuration support
+ * (network-manager)
+ * (network-manager-config-connectivity-ubuntu)
+ * (network-manager-pptp-gnome)
+ * (network-manager-openvpn-gnome)
+ * (libproxy1-plugin-gsettings)
+ * (libproxy1-plugin-networkmanager)
 
 = GUI infrastructure =
 
@@ -98,9 +103,11 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * snap:firefox
  * snap:gnome-42-2204
  * snap:gtk-common-themes
- * snap:snap-store
+ * snap:snap-store=2/stable/ubuntu-24.10
  * snap:snapd-desktop-integration
- * snap:firmware-updater [amd64]
+ * snap:firmware-updater=1/stable/ubuntu-24.10 [amd64]
+ * snap:prompting-client=1/stable/ubuntu-24.10
+ * snap:desktop-security-center=1/stable/ubuntu-24.10
 
 We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
 
@@ -168,9 +175,3 @@ Accessibility tools:
 
  * mamolinux-desktop-minimal # metapackage for everything here
  * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
-
-= ARM64 Desktop =
-
- * (flash-kernel) [arm64] # currently not installed by our installers, but needed for dtbs
- * (protection-domain-mapper) [arm64] # needed for access to QCOM hardware
- * (qrtr-tools) [arm64]  # needed for access to QCOM hardware

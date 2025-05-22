@@ -1,6 +1,5 @@
-feature follow-recommends
-include platform.noble
-include seeds.noble/languages
+include platform.oracular
+include seeds.oracular/languages
 desktop-minimal: desktop-common
 desktop: desktop-minimal desktop-common
 desktop-full: desktop desktop-minimal desktop-common
@@ -16,8 +15,8 @@ server: standard
 server-cloud-minimal:
 server-live: server
 server-minimal: server-cloud-minimal
-live: desktop-minimal live-common desktop-default-languages
 ship: boot
+live: desktop-minimal live-common desktop-default-languages
 development: desktop-minimal
 # default language support
 desktop-default-languages: desktop-minimal-default-languages desktop-en desktop-es desktop-de desktop-fr desktop-it desktop-pt desktop-ru desktop-zh

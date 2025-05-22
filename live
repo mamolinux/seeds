@@ -10,7 +10,7 @@ Task-Seeds: live-common desktop-default-languages
 
 == The Ubuntu live installer ==
 
- * snap:ubuntu-desktop-bootstrap/classic
+ * snap:ubuntu-desktop-bootstrap/classic=24.10/stable/ubuntu-24.10
  * cryptsetup
 
 == Input methods ==
@@ -31,6 +31,15 @@ Input methods for non-default languages included in live
 
  * zfsutils-linux
  * zfs-initramfs
+
+== AD integration ==
+
+ # authentication
+ * sssd
+ * realmd
+
+ # tool to join domain (will be purged afterward)
+ * adcli
 
 == Secureboot setup ==
 
