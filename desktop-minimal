@@ -10,12 +10,14 @@ Task-Seeds: desktop-common
 == Architecture-independent ==
 
 Bluetooth:
+
  * blueman # bluetooth manager gui
  * (gnome-bluetooth-sendto) # desktop bluetooth support
 
 Printer:
 
  * system-config-printer
+ * (python3-smbc)		# needed to connect network printers shared by windows
 
 = Network Services =
 
@@ -32,6 +34,7 @@ Basic network services, VPN and Windows integration.
 
  * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
  * !notification-daemon           # cinnamon provides this feature instead
+ * !terminator !xterm             # gnome-terminal is our terminal in main
 
 Input methods:
 
@@ -50,6 +53,8 @@ Desktop Experience:
  * ubuntu-report
  * (gnome-firmware)
  * (gnome-software)
+ * (gnome-remote-desktop)
+ * (systemd-oomd)
 
 = Desktop apps =
 
@@ -57,7 +62,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  * apport-gtk
  * eog
- * evince
+ * papers
  * file-roller
  * firefox
  * gnome-disk-utility
@@ -69,7 +74,6 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
  * gvfs-backends      # let users connect to any server using nemo
  * language-selector-gnome
- * redshift-gtk
  * synapse
  * software-properties-gtk
  * system-monitoring-center
@@ -78,6 +82,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * update-manager
  * update-notifier
  * vlc
+ * xdg-terminal-exec
  * xdg-user-dirs
  * xdg-user-dirs-gtk
  * pipewire-pulse
@@ -103,11 +108,11 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * snap:firefox
  * snap:gnome-42-2204
  * snap:gtk-common-themes
- * snap:snap-store=2/stable/ubuntu-24.10
+ * snap:snap-store=2/stable/ubuntu-25.04
  * snap:snapd-desktop-integration
- * snap:firmware-updater=1/stable/ubuntu-24.10 [amd64]
- * snap:prompting-client=1/stable/ubuntu-24.10
- * snap:desktop-security-center=1/stable/ubuntu-24.10
+ * snap:firmware-updater=1/stable/ubuntu-25.04 [amd64]
+ * snap:prompting-client=1/stable/ubuntu-25.04
+ * snap:desktop-security-center=1/stable/ubuntu-25.04
 
 We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
 
@@ -167,6 +172,15 @@ Accessibility tools:
  * (libpam-fprintd)
  * (libpam-sss) # used by the default smartcard service
 
+= Installer integration =
+
+ubuntu-desktop-installer (based on subiquity) needs cloud-init present in
+the target install to finish setup on first boot
+
+ * (cloud-init)
+ * (kdump-tools)            # Needed to enable kernel crash dumps by default
+                            # but leave as recommend to allow uninstall later.
+
 = Documentation =
 
  * (ubuntu-docs)
@@ -175,3 +189,4 @@ Accessibility tools:
 
  * mamolinux-desktop-minimal # metapackage for everything here
  * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
+ * initramfs-tools | dracut # ISO builds currently break if this is not part of the base layer

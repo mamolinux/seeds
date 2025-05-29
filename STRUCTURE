@@ -1,7 +1,7 @@
-include platform.oracular
-include seeds.oracular/languages
-desktop-minimal: desktop-common
+include platform.plucky
+include seeds.plucky/languages
 desktop: desktop-minimal desktop-common
+desktop-minimal: desktop-common
 desktop-full: desktop desktop-minimal desktop-common
 budgie-minimal: desktop-common
 budgie: budgie-minimal desktop-common

@@ -5,5 +5,5 @@ Task-Extended-Description: This task provides the extra packages installed on th
  * casper
  * openssh-server
  * nvme-cli
- * snap:subiquity/classic=24.10/stable
+ * snap:subiquity/classic=25.04/stable
  * s390-tools-zkey [s390x]
