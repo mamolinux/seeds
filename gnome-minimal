@@ -4,3 +4,195 @@ Task-Description: MamoLinux Gnome minimal desktop
 Task-Extended-Description: This task provides the MamoLinux Gnome desktop minimal environment.
 Task-Key: mamolinux-gnome-minimal
 Task-Seeds: desktop-common
+
+= Hardware and Architecture Support =
+
+== Architecture-independent ==
+
+Bluetooth:
+
+ * (gnome-bluetooth-sendto) # desktop bluetooth support
+
+Printer:
+
+ * system-config-printer
+
+= Network Services =
+
+Basic network services, VPN and Windows integration.
+
+ * (network-manager)
+ * (network-manager-config-connectivity-ubuntu)
+ * (network-manager-pptp-gnome)
+ * (network-manager-openvpn-gnome)
+ * (libproxy1-plugin-gsettings)
+ * (libproxy1-plugin-networkmanager)
+
+= GUI infrastructure =
+
+ * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
+ * !notification-daemon           # cinnamon provides this feature instead
+
+Input methods:
+
+ * ibus
+ * (im-config)
+ * (ibus-gtk)
+ * (ibus-gtk3)
+ * (ibus-table)
+
+Desktop Experience:
+ * gnome-shell
+ * gnome-session [!s390x]
+ * gnome-shell-extension-desktop-icons-ng
+ * gnome-shell-extension-ubuntu-dock
+ * gnome-shell-extension-ubuntu-tiling-assistant
+ * gnome-shell-extension-appindicator
+ * gnome-remote-desktop
+ * gnome-tweaks
+ * gnome-shell-extension-manager
+ * gdm3
+ * gnome-settings-daemon
+ * gnome-control-center
+ * gnome-menus
+ * nautilus
+ * ubuntu-report
+ * gir1.2-gmenu-3.0 # LP: #1726093
+ * nautilus-sendto
+ * sysprof
+ * (systemd-oomd)
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * apport-gtk
+ * eog
+ * papers
+ * file-roller
+ * firefox
+ * gnome-disk-utility
+ * gparted
+ * gnome-calculator
+ * gnome-clocks
+ * gnome-screenshot
+ * gufw
+ * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
+ * gvfs-backends      # let users connect to any server using nemo
+ * language-selector-gnome
+ * synapse
+ * software-properties-gtk
+ * system-monitoring-center
+ * theme-manager
+ * ubuntu-release-upgrader-gtk
+ * update-manager
+ * update-notifier
+ * vlc
+ * xdg-terminal-exec
+ * xdg-user-dirs
+ * xdg-user-dirs-gtk
+ * pipewire-pulse
+ * wireplumber
+ * xed
+ * yelp
+ * zenity
+ * xdg-desktop-portal-gnome # Useful for desktop snaps
+
+ * (gnome-power-manager)
+ * (gnome-font-viewer)
+ * (xdg-desktop-portal-gtk)
+ * (xdg-utils)         # useful utilities
+ * (libspa-0.2-bluetooth) # PipeWire Bluetooth
+ * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
+ * (gnome-system-monitor)
+ * (appstream)          # required by snap:snap-store for appstream cache
+ * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
+ * (gamemode)
+ * (whoopsie)
+
+ Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
+ * snap:firefox
+ * snap:gnome-42-2204
+ * snap:gtk-common-themes
+ * snap:snap-store=2/stable/ubuntu-25.04
+ * snap:snapd-desktop-integration
+ * snap:firmware-updater=1/stable/ubuntu-25.04 [amd64]
+ * snap:prompting-client=1/stable/ubuntu-25.04
+ * snap:desktop-security-center=1/stable/ubuntu-25.04
+
+We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
+
+ * (gpg-agent)
+ * (dirmngr)
+
+Themes: we will ship only the very best looking themes. We won't ship everything that Debian ships, just a custom package that includes our default theme.
+
+Sucharu Theming
+
+ * sucharu-theme-gnome-shell
+ * sucharu-theme-cursor
+ * sucharu-theme-gtk
+ * sucharu-theme-icon
+ * sucharu-theme-plank
+ * sucharu-theme-unity
+ * sucharu-theme-xfwm4
+
+Wallpapers
+
+ * mamolinux-wallpapers
+
+Fonts
+
+ * (fonts-liberation2)  # These 3 fonts are required for emoji in GTK input methods
+ * (fonts-opensymbol)
+
+Others
+
+ * gnome-session-canberra   # Needed to make login/logout sounds audible.
+
+Boot theme
+
+ * plymouth-theme-spinner
+
+Settings: we have some settings overrides by default in an unique package.
+          and provide our ones, like sound settings
+ * mamolinux-settings-gnome
+
+The gstreamer1.0 packages we want to install:
+
+ * gstreamer1.0-alsa
+ * gstreamer1.0-plugins-base-apps
+ * gstreamer1.0-packagekit [!riscv64 !s390x]
+
+Accessibility tools:
+
+ * (gnome-accessibility-themes)
+ * (brltty)
+ * (xcursor-themes)
+ * (mousetweaks)
+ * at-spi2-core
+ * libatk-adaptor
+
+== PAM modules for GDM ==
+
+ * (libpam-fprintd)
+ * (libpam-sss) # used by the default smartcard service
+
+= Installer integration =
+
+ubuntu-desktop-installer (based on subiquity) needs cloud-init present in
+the target install to finish setup on first boot
+
+ * (cloud-init)
+ * (kdump-tools)            # Needed to enable kernel crash dumps by default
+                            # but leave as recommend to allow uninstall later.
+
+= Documentation =
+
+ * (ubuntu-docs)
+
+= Other =
+
+ * mamolinux-gnome-minimal # metapackage for everything here
+ * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
+ * initramfs-tools | dracut # ISO builds currently break if this is not part of the base layer

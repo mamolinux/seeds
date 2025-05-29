@@ -5,6 +5,31 @@ Task-Extended-Description: This task provides the MamoLinux Gnome desktop full e
 Task-Key: mamolinux-gnome-full
 Task-Seeds: gnome
 
+= GUI infrastructure =
+
+Desktop Experience:
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * baobab
+ * flatpak
+ * gnome-characters
+ * gnome-snapshot
+ * goldendict
+ * gucharmap
+ * gtkhash
+ * hardinfo
+ * hexchat
+ * lm-sensors
+ * rhythmbox
+ * syncthing
+ * variety
+ * vlc-plugin-access-extra
+
+= Fonts =
+
 = Other =
 
  * mamolinux-gnome # we are a superset of mamolinux-desktop

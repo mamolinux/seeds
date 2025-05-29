@@ -5,6 +5,63 @@ Task-Extended-Description: This task provides the MamoLinux Gnome desktop enviro
 Task-Key: mamolinux-gnome
 Task-Seeds: gnome-minimal desktop-common
 
+= GUI infrastructure =
+
+Desktop Experience:
+ * snap:thunderbird
+
+OS-only stuff:
+ * p7zip-full            # mamolinux: supports a crazy number of formats
+
+= Desktop apps =
+
+We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
+
+ * evolution
+ * gdebi
+ * leaptime-manager
+ * shotwell
+ * simple-scan
+ * simple-pwgen
+ * sticky
+ * timeshift
+ * (deja-dup)
+ * (gnome-calendar)
+ * (gnome-todo)
+ * (remmina)
+ * (totem)
+ * (transmission-gtk)
+ * (usb-creator-gtk) [i386 amd64]
+
+Accessibility tools:
+
+ * (orca)
+ * (speech-dispatcher)
+
+Games: We only ship a few by default.
+ * gnome-chess
+ * (gnome-mahjongg)
+ * (aisleriot)
+ * (gnome-mines)
+ * (gnome-sudoku)
+ * (branding-ubuntu)       # Ubuntu branding for some games
+
+= Key management and signing =
+
+ * (gnome-keyring)
+ * seahorse
+ * (libpam-gnome-keyring)
+
+Default office suite: libreoffice
+ * libreoffice
+ * !libreoffice-core-nogui
+ * (libreoffice-style-yaru)
+ * (libreoffice-gnome)
+ * (libreoffice-writer)
+ * (libreoffice-calc)
+ * (libreoffice-impress)
+ * (libreoffice-math)
+
 = Other =
 
  * mamolinux-gnome-minimal # we are a superset of minimal gnome
