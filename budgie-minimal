@@ -51,7 +51,7 @@ Desktop Experience:
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
  * apport-gtk
- * eog
+ * loupe
  * evince
  * file-roller
  * firefox
@@ -137,7 +137,7 @@ Boot theme
 
 Settings: we have some settings overrides by default in an unique package.
           and provide our ones, like sound settings
- * mamolinux-settings-cinnamon
+ * mamolinux-settings-budgie
 
 The gstreamer1.0 packages we want to install:
 

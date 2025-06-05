@@ -49,7 +49,7 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * timeshift
  * (deja-dup)
  * (gnome-calendar)
- * (gnome-todo)
+ * (endeavour)
  * (remmina)
  * (thunderbird)
  * (totem)
@@ -78,9 +78,12 @@ Games: We only ship a few by default.
 Default office suite: libreoffice
  * libreoffice
  * !libreoffice-core-nogui
- * (libreoffice-style-breeze)
+ * (libreoffice-style-yaru)
  * (libreoffice-gnome)
- * (libreoffice-ogltrans)
+ * (libreoffice-writer)
+ * (libreoffice-calc)
+ * (libreoffice-impress)
+ * (libreoffice-math)
 
 = Other =
 
