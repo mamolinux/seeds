@@ -16,6 +16,7 @@ and minimal Ubuntu cloud.
  * s390-tools [s390x]
  * snapd
  * sudo
+ * sudo-rs
  * systemd
  * systemd-resolved
  * systemd-sysv

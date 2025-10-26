@@ -15,7 +15,7 @@ Bluetooth:
 
 Printer:
 
- * system-config-printer
+ * (system-config-printer)
 
 = Network Services =
 
@@ -31,11 +31,12 @@ Basic network services, VPN and Windows integration.
 = GUI infrastructure =
 
  * libnotify-bin                  # various scripts need notify-send (such as .bashrc's "alert")
- * !notification-daemon           # cinnamon provides this feature instead
+ * !notification-daemon           # gnome-shell provides this feature instead
+ * !terminator !xterm             # ptyxis is our terminal in main
 
 Input methods:
 
- * ibus
+ * (ibus)
  * (im-config)
  * (ibus-gtk)
  * (ibus-gtk3)
@@ -48,46 +49,35 @@ Desktop Experience:
  * gnome-shell-extension-ubuntu-dock
  * gnome-shell-extension-ubuntu-tiling-assistant
  * gnome-shell-extension-appindicator
- * gnome-remote-desktop
- * gnome-tweaks
  * gnome-shell-extension-manager
  * gdm3
  * gnome-settings-daemon
  * gnome-control-center
  * gnome-menus
  * nautilus
- * ubuntu-report
- * gir1.2-gmenu-3.0 # LP: #1726093
- * nautilus-sendto
- * sysprof
+ * (gir1.2-gmenu-3.0) # LP: #1726093
+ * (nautilus-sendto)
+ * (sysprof)
+ * (gnome-initial-setup)
+ * (gnome-logs)
+ * ptyxis
+ * (ubuntu-report)
+ * (ubuntu-insights)
  * (systemd-oomd)
+ * (hwctl) [amd64] # As used by Ubuntu Pro (LP: #2072561)
 
 = Desktop apps =
 
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
- * apport-gtk
- * loupe
- * papers
- * file-roller
- * firefox
- * gnome-disk-utility
- * gparted
- * gnome-calculator
- * gnome-clocks
- * gnome-screenshot
  * gufw
  * gvfs-fuse          # let non-GNOME apps see GVFS via fuse
  * gvfs-backends      # let users connect to any server using nemo
  * language-selector-gnome
- * synapse
  * software-properties-gtk
- * system-monitoring-center
- * theme-manager
  * ubuntu-release-upgrader-gtk
  * update-manager
  * update-notifier
- * vlc
  * xdg-terminal-exec
  * xdg-user-dirs
  * xdg-user-dirs-gtk
@@ -96,29 +86,41 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * xed
  * yelp
  * zenity
- * xdg-desktop-portal-gnome # Useful for desktop snaps
 
+ * (apport-gtk)
+ * (loupe)
+ * (papers)
+ * (file-roller)
+ * (firefox)
+ * (gamemode)
+ * (gnome-disk-utility)
+ * (gparted)
+ * (gnome-calculator)
  * (gnome-power-manager)
  * (gnome-font-viewer)
+ * (synapse)
+ * (system-monitoring-center)
+ * (theme-manager)
+ * (vlc)
+ * (whoopsie)
+ * (xdg-desktop-portal-gnome) # Useful for desktop snaps
  * (xdg-desktop-portal-gtk)
  * (xdg-utils)         # useful utilities
  * (libspa-0.2-bluetooth) # PipeWire Bluetooth
  * (libglib2.0-bin)     # mostly used as xdg-open backend (gio open)
- * (gnome-system-monitor)
  * (appstream)          # required by snap:snap-store for appstream cache
  * (apt-config-icons-hidpi)   # required by snap:snap-store for apt icons
- * (gamemode)
- * (whoopsie)
+ * (wsdd)   # Discovery of Samba hosts, exposed through gvfs
 
  Desktop snaps: these also exist in ubuntu-release-upgrader's DistUpgradeQuirks.py for users who upgrade.
  * snap:firefox
  * snap:gnome-42-2204
  * snap:gtk-common-themes
- * snap:snap-store=2/stable/ubuntu-25.04
+ * snap:snap-store=2/stable/ubuntu-25.10
  * snap:snapd-desktop-integration
- * snap:firmware-updater=1/stable/ubuntu-25.04 [amd64]
- * snap:prompting-client=1/stable/ubuntu-25.04
- * snap:desktop-security-center=1/stable/ubuntu-25.04
+ * snap:firmware-updater=1/stable/ubuntu-25.10 [amd64]
+ * snap:prompting-client=1/stable/ubuntu-25.10
+ * snap:desktop-security-center=1/stable/ubuntu-25.10
 
 We use gnupg's pinentry support as of wily, instead of gnome-keyring as before.
 
@@ -129,17 +131,17 @@ Themes: we will ship only the very best looking themes. We won't ship everything
 
 Sucharu Theming
 
- * sucharu-theme-gnome-shell
- * sucharu-theme-cursor
- * sucharu-theme-gtk
- * sucharu-theme-icon
- * sucharu-theme-plank
- * sucharu-theme-unity
- * sucharu-theme-xfwm4
+ * (sucharu-theme-cinnamon-shell)
+ * (sucharu-theme-cursor)
+ * (sucharu-theme-gtk)
+ * (sucharu-theme-icon)
+ * (sucharu-theme-plank)
+ * (sucharu-theme-unity)
+ * (sucharu-theme-xfwm4)
 
 Wallpapers
 
- * mamolinux-wallpapers
+ * (mamolinux-wallpapers)
 
 Fonts
 
@@ -152,7 +154,7 @@ Others
 
 Boot theme
 
- * plymouth-theme-spinner
+ * (plymouth-theme-spinner)
 
 Settings: we have some settings overrides by default in an unique package.
           and provide our ones, like sound settings
@@ -183,7 +185,6 @@ Accessibility tools:
 ubuntu-desktop-installer (based on subiquity) needs cloud-init present in
 the target install to finish setup on first boot
 
- * (cloud-init)
  * (kdump-tools)            # Needed to enable kernel crash dumps by default
                             # but leave as recommend to allow uninstall later.
 
@@ -195,4 +196,4 @@ the target install to finish setup on first boot
 
  * mamolinux-gnome-minimal # metapackage for everything here
  * (libwmf0.2-7-gtk) # provides a gdk-pixbuf loader for WMF images
- * initramfs-tools | dracut # ISO builds currently break if this is not part of the base layer
+ * (dracut) # ISO builds currently break if this is not part of the base layer

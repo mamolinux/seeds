@@ -1,5 +1,5 @@
-include platform.plucky
-include seeds.plucky/languages
+include platform.questing
+include seeds.questing/languages
 desktop: desktop-minimal desktop-common
 desktop-minimal: desktop-common
 desktop-full: desktop desktop-minimal desktop-common
@@ -15,7 +15,7 @@ server: standard
 server-cloud-minimal:
 server-live: server
 server-minimal: server-cloud-minimal
-ship: boot
+ship: boot desktop-minimal
 live: desktop-minimal live-common desktop-default-languages
 development: desktop-minimal
 # default language support

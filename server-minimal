@@ -10,6 +10,8 @@ called "an Ubuntu server".
 
  * (needrestart)
  * (unattended-upgrades)
+ * (hwctl) [amd64]          # As used by Ubuntu Pro (LP: #2072561)
+ * chrony | time-daemon     # NTS enablement: LP: #2111342, chrony MIR: LP: #1744072
 
 == Block device / filesystem tools ==
 
