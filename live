@@ -9,7 +9,7 @@ Task-Seeds: live-common desktop-default-languages
 
 == The Ubuntu live installer ==
 
- * snap:ubuntu-desktop-bootstrap/classic=25.04/stable/ubuntu-25.04
+ * snap:ubuntu-desktop-bootstrap/classic=25.10/stable
  * cryptsetup
 
 == Input methods ==

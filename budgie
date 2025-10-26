@@ -5,32 +5,14 @@ Task-Extended-Description: This task provides the MamoLinux Budgie desktop envir
 Task-Key: mamolinux-budgie
 Task-Seeds: budgie-minimal desktop-common
 
-= Hardware and Architecture Support =
-
-== Architecture-independent ==
-
-Bluetooth:
+= GUI infrastructure =
 
 Printer:
 
  * (python3-smbc)		# needed to connect network printers shared by windows
 
-= Network Services =
-
-Basic network services, VPN and Windows integration.
-
- * (network-manager)
- * (network-manager-config-connectivity-ubuntu)
- * (network-manager-pptp-gnome)
- * (libproxy1-plugin-gsettings)
- * (libproxy1-plugin-networkmanager)
-
-= GUI infrastructure =
-
 Desktop Experience:
-
-Location Support:
- * (geoclue-2.0)
+ * snap:thunderbird
 
 OS-only stuff:
  * p7zip-full            # mamolinux: supports a crazy number of formats
@@ -41,20 +23,16 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  * evolution
  * gdebi
+ * gnome-screenshot
  * leaptime-manager
- * shotwell
  * simple-scan
  * simple-pwgen
  * sticky
  * timeshift
- * (deja-dup)
- * (gnome-calendar)
  * (endeavour)
- * (remmina)
- * (thunderbird)
- * (totem)
- * (transmission-gtk)
- * (usb-creator-gtk) [i386 amd64]
+ * (gnome-remote-desktop)
+ * (gnome-calendar)
+ * (gnome-clocks)
 
 Accessibility tools:
 

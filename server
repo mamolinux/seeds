@@ -9,16 +9,13 @@ This seed lists the packages we want to install by default in the new server ins
 = System administration tools =
 
  * apport # LP: #424051
- * byobu
  * curl
  * git # LP: 1394756
  * patch
  * pollinate			# Seed the PRNG
- * screen
  * software-properties-common # LP: #439566
  * tmux				# Share/detach sessions
  * vim
- * wget				# Fetch data from the command line
 
 = Network =
 
@@ -55,7 +52,6 @@ This seed lists the packages we want to install by default in the new server ins
 = Other =
 
  * ubuntu-server		# metapackage for everything in this task
- * cloud-guest-utils		# growpart (resize partitions)
  * fonts-ubuntu-console		# Part of the Ubuntu server experience
  * lxd-installer			# Every Ubuntu server can host 100x containers
  * (open-vm-tools)			# Needed for Ubuntu as VMware guests
@@ -63,7 +59,6 @@ This seed lists the packages we want to install by default in the new server ins
  * (snapd)
  * s390-tools [s390x]           # needed for z block devices, bootloader, encryption features, etc.
  * gnupg
- * dirmngr
  * (landscape-common) # LP: #1756261, recommends to be removable for minimal (LP: #1763182)
  * motd-news-config # LP: #1888575
 

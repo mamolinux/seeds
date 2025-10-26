@@ -7,6 +7,10 @@ Task-Seeds: gnome-minimal desktop-common
 
 = GUI infrastructure =
 
+Printer:
+
+ * (python3-smbc)		# needed to connect network printers shared by windows
+
 Desktop Experience:
  * snap:thunderbird
 
@@ -19,19 +23,16 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
 
  * evolution
  * gdebi
+ * gnome-screenshot
  * leaptime-manager
- * shotwell
  * simple-scan
  * simple-pwgen
  * sticky
  * timeshift
- * (deja-dup)
- * (gnome-calendar)
  * (endeavour)
- * (remmina)
- * (totem)
- * (transmission-gtk)
- * (usb-creator-gtk) [i386 amd64]
+ * (gnome-remote-desktop)
+ * (gnome-calendar)
+ * (gnome-clocks)
 
 Accessibility tools:
 

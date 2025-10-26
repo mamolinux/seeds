@@ -14,9 +14,8 @@ Desktop Experience:
 We use many GNOME applications as part of our desktop user interface. Rather than using Debian's meta-packages they are deliberately expanded so that we can select things a bit better.
 
  * baobab
- * cheese
- * flatpak
  * gnome-characters
+ * gnome-snapshot
  * goldendict
  * gucharmap
  * gtkhash
@@ -27,6 +26,11 @@ We use many GNOME applications as part of our desktop user interface. Rather tha
  * syncthing
  * variety
  * vlc-plugin-access-extra
+ * (remmina)
+ * (shotwell)
+ * (totem)
+ * (transmission-gtk)
+ * (usb-creator-gtk) [i386 amd64]
 
 = Fonts =
 
